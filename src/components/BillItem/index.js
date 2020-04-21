@@ -10,13 +10,13 @@ const BillItem = ({ bill, handleRemoveClick, handleAddClick, activeTab }) => {
       ? bill.transactions.map((transaction, i) => (
           <S.BillItem key={i}>
             <div>
-              <b>Amount:</b> {transaction.amount}
+              <b>Id:</b> {transaction.id}
             </div>
             <div>
               <b>Date: </b> {transaction.date}
             </div>
             <div>
-              <b>Id:</b> {transaction.id}
+              <b>Amount:</b> £{transaction.amount}
             </div>
           </S.BillItem>
         ))

@@ -1,11 +1,37 @@
+## Meet Cleo
+
+### View bills and potential bills
+
+- User can click 'bills' or 'potential bills' tabs
+- User can view number of transactions in each bill
+- User can click each bill item to show transactions
+- User can remove or add bill items
+
+- Chosen option: Approx 5 hours development
+
+## To start:
+
+- \$ git clone https://github.com/habin-isa/meet-cleo.git
+- \$ cd meet-cleo
+- \$ yarn
+- \$ yarn start
+- New tab: \$ yarn api
+
+- To test: \$ yarn test
+
+## ![alt text](/src/assets/meet-cleo-preview.png 'Preview')
+
 ## Cleo Frontend Interview - Bills
+
 ### Get Started
+
 1. Fork or clone this repo (a simple [`create-react-app`](https://github.com/facebook/create-react-app) extended with [`json-server`](https://github.com/typicode/json-server) and some Cleo-specific goodies)
 1. Install dependencies via `yarn` (or `npm`)
 1. Run `yarn start` to start the dev server
 1. Run `yarn api` in a different terminal to start the json-api server
 
 ### The Task
+
 1. Create a Tabs component that allows multiple pages to be switched between.
 1. One tab should show a list of bills. These can be found at http://localhost:3002/bills/. Bills have a flag `isBill` set to `true`.
 1. Another tab should show a list of transactions which are potential bills. These can also be found at http://localhost:3000/bills/. Potential bills have a flag `isBill` set to `false`.
@@ -16,6 +42,7 @@
 1. After each action, the lists should reflect the changes.
 
 ### Notes
+
 - Please aim to spend 2-3 hours completing this task
 - We'd like to see state management tools being used
 - Tools we use at Cleo include styled-components, Typescript and Redux (with Sagas)
