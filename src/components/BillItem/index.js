@@ -9,9 +9,15 @@ const BillItem = ({ bill, handleRemoveClick, handleAddClick, activeTab }) => {
     showTransactions === true
       ? bill.transactions.map((transaction, i) => (
           <S.BillItem key={i}>
-            <div>Amount: {transaction.amount}</div>
-            <div>Date: {transaction.date}</div>
-            <div>Id: {transaction.id}</div>
+            <div>
+              <b>Amount:</b> {transaction.amount}
+            </div>
+            <div>
+              <b>Date: </b> {transaction.date}
+            </div>
+            <div>
+              <b>Id:</b> {transaction.id}
+            </div>
           </S.BillItem>
         ))
       : '';

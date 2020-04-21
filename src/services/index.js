@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-const billsUrl = 'http://localhost:3002/bills';
-const updateUrl = 'http://localhost:3000/bills/';
+const billsUrl = 'http://localhost:3002/bills/';
 
 export const getBills = async () => {
   const response = await axios.get(billsUrl);
@@ -30,7 +29,7 @@ export const getBills = async () => {
 // };
 
 export const updateBill = async (id, data) => {
-  const url = updateUrl + `${id}`;
+  const url = billsUrl + `${id}`;
   return fetch(url, {
     method: 'PATCH',
     headers: {

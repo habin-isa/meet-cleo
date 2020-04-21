@@ -39,7 +39,9 @@ const Tabs = () => {
   const handleUpdateBill = async (id, data) => {
     try {
       const response = await updateBill(id, data);
-      console.log(response);
+      console.log('handleUpdateBill res:', response);
+      getBillsData();
+      handleData(activeTab);
     } catch (error) {
       console.log('error updating bill');
     } finally {
@@ -54,8 +56,8 @@ const Tabs = () => {
             key={i}
             bill={bill}
             activeTab={activeTab}
-            handleRemoveClick={() => handleUpdateBill(bill.id, true)}
-            handleAddClick={() => handleUpdateBill(bill.id, false)}
+            handleRemoveClick={() => handleUpdateBill(bill.id, false)}
+            handleAddClick={() => handleUpdateBill(bill.id, true)}
           />
         ))
       : '';
