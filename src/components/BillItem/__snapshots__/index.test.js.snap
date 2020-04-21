@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BillItem component should render 1`] = `
+<div
+  class="sc-bdVaJa cAziFA"
+>
+  <div>
+    <div>
+      Ferrari
+    </div>
+    <div>
+      No. of transactions: 
+      3
+    </div>
+  </div>
+  
+</div>
+`;

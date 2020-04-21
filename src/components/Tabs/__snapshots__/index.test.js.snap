@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs component should render 1`] = `
+<div
+  class="sc-bdVaJa bDWFJH"
+>
+  <div
+    class="sc-bwzfXH iXXjDG"
+  >
+    <div
+      class="sc-htpNat cWrCrG"
+    >
+      Bills
+    </div>
+    <div
+      class="sc-htpNat cWrCrG"
+    >
+      Potential Bills
+    </div>
+  </div>
+  <div>
+    Active tab: 
+    bills
+  </div>
+  
+</div>
+`;
