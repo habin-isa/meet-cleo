@@ -1,10 +1,13 @@
 {
-  "name": "fe-interview",
+  "name": "meet-cleo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.2",
     "json-server": "^0.14.0",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.13.1",
+    "prettier-quick": "^0.0.5",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "2.0.5",
@@ -12,7 +15,7 @@
   },
   "scripts": {
     "api": "json-server --watch db.json --port 3002",
-    "start": "PORT=3001 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test"
   },
@@ -24,5 +27,19 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "react-test-renderer": "^16.13.0"
+  }
 }
