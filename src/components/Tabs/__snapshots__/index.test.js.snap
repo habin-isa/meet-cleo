@@ -2,18 +2,18 @@
 
 exports[`Tabs component should render 1`] = `
 <div
-  class="sc-bdVaJa bDWFJH"
+  class="sc-bdVaJa idurHR"
 >
   <div
     class="sc-bwzfXH iXXjDG"
   >
     <div
-      class="sc-htpNat cWrCrG"
+      class="sc-htpNat hmdYml"
     >
       Bills
     </div>
     <div
-      class="sc-htpNat cWrCrG"
+      class="sc-htpNat hmdYml"
     >
       Potential Bills
     </div>

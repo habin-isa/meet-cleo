@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './styles';
 
-const BillItem = ({ bill }) => {
+const BillItem = ({ bill, handleRemoveClick, handleAddClick, activeTab }) => {
   const [showTransactions, setShowTransactions] = useState(false);
 
   const renderedTransactions =
@@ -14,13 +14,18 @@ const BillItem = ({ bill }) => {
           </S.BillItem>
         ))
       : '';
-
   return (
     <S.Wrapper>
-      <div onClick={() => setShowTransactions(!showTransactions)}>
+      <S.BillContainer>
         <div>{bill.name}</div>
         <div>No. of transactions: {bill.transactions.length}</div>
-      </div>
+        {activeTab === 'bills' ? (
+          <button onClick={handleRemoveClick}>Remove bill</button>
+        ) : (
+          <button onClick={handleAddClick}>Add bill</button>
+        )}
+      </S.BillContainer>
+      <S.SeeTransactions onClick={() => setShowTransactions(!showTransactions)}>See transactions:</S.SeeTransactions>
       {renderedTransactions}
     </S.Wrapper>
   );

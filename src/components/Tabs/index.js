@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import * as S from './styles';
-import { getBills } from '../../services/index';
+import { getBills, updateBill } from '../../services/index';
 import BillItem from '../BillItem';
+import { act } from 'react-test-renderer';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState();
@@ -36,9 +37,31 @@ const Tabs = () => {
     }
   };
 
+  const handleUpdateBill = async (id, data) => {
+    try {
+      const response = await updateBill(id, data);
+      console.log(response);
+    } catch (error) {
+      console.log('error updating bill');
+    } finally {
+      console.log('removeBill called');
+    }
+  };
+
   console.log('billsData log', billsData);
 
-  const renderedBillItems = billsData !== undefined ? billsData.map((bill, i) => <BillItem key={i} bill={bill} />) : '';
+  const renderedBillItems =
+    billsData !== undefined
+      ? billsData.map((bill, i) => (
+          <BillItem
+            key={i}
+            bill={bill}
+            activeTab={activeTab}
+            handleRemoveClick={() => handleUpdateBill(bill.id, true)}
+            handleAddClick={() => handleUpdateBill(bill.id, false)}
+          />
+        ))
+      : '';
 
   useEffect(() => {
     if (billsData === undefined) {

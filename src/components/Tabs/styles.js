@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  width: 100%;
+  background: #f6f7fa;
+  height: 100vh;
+`;
 
 export const TabsContainer = styled.div`
   display: flex;
@@ -11,13 +15,12 @@ export const TabsContainer = styled.div`
 `;
 
 export const Tab = styled.div`
-  background: pink;
   cursor: pointer;
   width: 100%;
   text-align: center;
   padding: 10px;
-  margin: 10px;
   &:hover {
-    opacity: 0.8;
+    background-color: #0e15ff;
+    color: white;
   }
 `;

@@ -1,11 +1,12 @@
 import React from 'react';
 import * as S from './styles';
+import TitleContainer from '../TitleContainer';
 import Tabs from '../Tabs';
 
 const App = () => {
   return (
     <S.Wrapper>
-      meet-cleo
+      <TitleContainer />
       <Tabs />
     </S.Wrapper>
   );

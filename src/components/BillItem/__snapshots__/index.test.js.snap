@@ -2,9 +2,11 @@
 
 exports[`BillItem component should render 1`] = `
 <div
-  class="sc-bdVaJa cAziFA"
+  class="sc-bdVaJa fWQwcs"
 >
-  <div>
+  <div
+    class="sc-bwzfXH RkBuh"
+  >
     <div>
       Ferrari
     </div>
@@ -12,6 +14,14 @@ exports[`BillItem component should render 1`] = `
       No. of transactions: 
       3
     </div>
+    <button>
+      Add bill
+    </button>
+  </div>
+  <div
+    class="sc-bxivhb gMtJmg"
+  >
+    See transactions:
   </div>
   
 </div>
