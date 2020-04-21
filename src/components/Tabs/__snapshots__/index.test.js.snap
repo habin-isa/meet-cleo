@@ -2,26 +2,26 @@
 
 exports[`Tabs component should render 1`] = `
 <div
-  class="sc-bdVaJa idurHR"
+  class="sc-bdVaJa dcBatb"
 >
   <div
-    class="sc-bwzfXH iXXjDG"
+    class="sc-bwzfXH jjKwmY"
   >
     <div
-      class="sc-htpNat hmdYml"
+      class="sc-htpNat iwYkgy"
     >
-      Bills
+      <div
+        class="sc-bxivhb ezgFeF"
+      >
+        Bills
+      </div>
+      <div
+        class="sc-bxivhb ezgFeF"
+      >
+        Potential Bills
+      </div>
     </div>
-    <div
-      class="sc-htpNat hmdYml"
-    >
-      Potential Bills
-    </div>
+    
   </div>
-  <div>
-    Active tab: 
-    bills
-  </div>
-  
 </div>
 `;

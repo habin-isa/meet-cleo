@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
+  border-radius: 25px;
 `;
 
 export const Title = styled.div`

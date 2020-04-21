@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import * as S from './styles';
 import { getBills, updateBill } from '../../services/index';
 import BillItem from '../BillItem';
-import { act } from 'react-test-renderer';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState();
@@ -48,8 +47,6 @@ const Tabs = () => {
     }
   };
 
-  console.log('billsData log', billsData);
-
   const renderedBillItems =
     billsData !== undefined
       ? billsData.map((bill, i) => (
@@ -72,26 +69,27 @@ const Tabs = () => {
 
   return (
     <S.Wrapper>
-      <S.TabsContainer>
-        <S.Tab
-          onClick={() => {
-            handleClick('bills');
-            handleData('bills');
-          }}
-        >
-          Bills
-        </S.Tab>
-        <S.Tab
-          onClick={() => {
-            handleClick('potentialBills');
-            handleData('potentialBills');
-          }}
-        >
-          Potential Bills
-        </S.Tab>
-      </S.TabsContainer>
-      <div>Active tab: {activeTab}</div>
-      {renderedBillItems}
+      <S.Container>
+        <S.TabsContainer>
+          <S.Tab
+            onClick={() => {
+              handleClick('bills');
+              handleData('bills');
+            }}
+          >
+            Bills
+          </S.Tab>
+          <S.Tab
+            onClick={() => {
+              handleClick('potentialBills');
+              handleData('potentialBills');
+            }}
+          >
+            Potential Bills
+          </S.Tab>
+        </S.TabsContainer>
+        {renderedBillItems}
+      </S.Container>
     </S.Wrapper>
   );
 };
