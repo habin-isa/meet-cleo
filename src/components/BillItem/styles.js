@@ -17,21 +17,36 @@ export const BillContainer = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 export const BillItem = styled.div`
   display: flex;
   align-items: center;
   color: #0e15ff;
-`;
-
-export const SeeTransactions = styled.div`
   padding-top: 10px;
-  &:hover {
-    color: #0e15ff;
-  }
+  font-size: 12px;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 export const Title = styled.div`
   font-size: 22px;
+`;
+
+export const Button = styled.button`
+  background: #0e15ff;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    opacity: 0.8;
+    outline: none;
+  }
 `;
