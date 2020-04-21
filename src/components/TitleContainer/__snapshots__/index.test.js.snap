@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleContainer component should render 1`] = `
+<div
+  class="sc-bdVaJa bggMrV"
+>
+  <div
+    class="sc-bwzfXH dkuDjy"
+  >
+    meet
+  </div>
+  <div
+    class="sc-bwzfXH dkuDjy"
+  >
+    cleo
+  </div>
+</div>
+`;

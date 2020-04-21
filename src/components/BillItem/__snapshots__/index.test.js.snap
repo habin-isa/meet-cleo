@@ -5,10 +5,10 @@ exports[`BillItem component should render 1`] = `
   class="sc-bdVaJa hBwGyE"
 >
   <div
-    class="sc-bwzfXH fHAcVi"
+    class="sc-bwzfXH iiAqBQ"
   >
     <div
-      class="sc-ifAKCX hucgpJ"
+      class="sc-bxivhb hkXpo"
     >
       Ferrari
     </div>
@@ -16,15 +16,12 @@ exports[`BillItem component should render 1`] = `
       No. of transactions: 
       3
     </div>
-    <button>
-      Remove bill
-    </button>
-  </div>
-  <div
-    class="sc-bxivhb jbglsB"
-  >
-    See transactions:
   </div>
   
+  <button
+    class="sc-ifAKCX hbqbpk"
+  >
+    Remove bill
+  </button>
 </div>
 `;

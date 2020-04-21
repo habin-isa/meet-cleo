@@ -12,7 +12,8 @@ describe('BillItem component', () => {
         { amount: '666', date: '20.20.20', id: '606' },
         { amount: '666', date: '20.20.20', id: '606' }
       ]
-    }
+    },
+    activeTab: 'bills'
   };
 
   it('should render', () => {

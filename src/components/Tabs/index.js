@@ -4,15 +4,15 @@ import { getBills, updateBill } from '../../services/index';
 import BillItem from '../BillItem';
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState();
+  const [activeTab, setActiveTab] = useState('bills');
   const [billsData, setBillsData] = useState();
   const [totalData, setTotalData] = useState();
 
   const getBillsData = async () => {
     try {
       const response = await getBills();
+      console.log('puppi', response.data);
       setTotalData(response.data);
-      console.log('billsData', response.data);
     } catch (error) {
       console.log('error fetching bills');
     } finally {
@@ -28,20 +28,26 @@ const Tabs = () => {
     if (val === 'bills') {
       const sortedData = totalData.filter((bill, i) => bill.isBill === true);
       setBillsData(sortedData);
-      console.log('sortedData', sortedData);
+      console.log('val is bills, new sortedData:', sortedData);
     } else if (val === 'potentialBills') {
       const sortedData = totalData.filter((bill, i) => bill.isBill === false);
       setBillsData(sortedData);
-      console.log('sortedData', sortedData);
+      console.log('val is potentialBills, new sortedData:', sortedData);
     }
   };
 
   const handleUpdateBill = async (id, data) => {
     try {
       const response = await updateBill(id, data);
-      console.log('handleUpdateBill res:', response);
+      console.log(response);
       getBillsData();
-      handleData(activeTab);
+      if (data === false) {
+        handleClick('potentialBills');
+        handleData('potentialBills');
+      } else {
+        handleClick('bills');
+        handleData('bills');
+      }
     } catch (error) {
       console.log('error updating bill');
     } finally {
